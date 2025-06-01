@@ -10,7 +10,7 @@ const HomePage: React.FC = () => {
     <>
       {/* Hero Section */}
       <section
-        className="relative w-[1608px] h-[481px] bg-cover bg-center flex items-center justify-center text-white rounded-[27px]"
+        className="relative w-auto h-[90vh] bg-cover bg-center flex items-center justify-center text-white rounded-[27px]"
         style={{
           backgroundImage: `url(${HERO_BG.src})`,
         }}
@@ -43,13 +43,13 @@ const HomePage: React.FC = () => {
       </section>
 
       {/* Listing Section */}
-      <section className="max-w-7xl mx-auto px-4 py-10">
+      <section className="mx-auto px-4 py-10">
         <h2 className="text-2xl font-semibold mb-6">Featured Listings</h2>
         <div className="grid grid-cols-4 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {PROPERTYLISTINGSAMPLE.map((property) => (
             <div
               key={property.name}
-              className="border rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition"
+              className="rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition"
             >
               <Image
                 src={property.image}

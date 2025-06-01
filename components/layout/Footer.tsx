@@ -1,13 +1,17 @@
 import React from "react";
 import Link from "next/link";
+import { logoTop } from "@/constants";
+import Image from "next/image";
 
 const Footer: React.FC = () => {
   return (
     <footer className="bg-gray-100 text-gray-700 mt-10 border-t">
-      <div className="max-w-7xl mx-auto px-4 py-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+      <div className="mx-auto px-4 py-10 grid grid-cols-4 sm:grid-cols-2 md:grid-cols-4 gap-8">
         {/* Column 1: Logo and Description */}
         <div>
-          <h3 className="text-xl font-bold text-indigo-600">StayFinder</h3>
+          <h3 className="text-xl font-bold text-indigo-600">
+            <Image src={logoTop} alt={""} />{" "}
+          </h3>
           <p className="mt-2 text-sm">
             Your gateway to comfortable, affordable, and unique accommodations
             worldwide.
@@ -60,7 +64,7 @@ const Footer: React.FC = () => {
 
       {/* Bottom Bar */}
       <div className="border-t border-gray-300 text-center text-sm py-4">
-        © {new Date().getFullYear()} StayFinder. All rights reserved.
+        © {new Date().getFullYear()} Alx. All rights reserved.
       </div>
     </footer>
   );
